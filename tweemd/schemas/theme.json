@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Tweemd Theme",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[-a-z.]+$",
+      "description": "Theme ID (lower-dash-case)"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Theme display name"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[.\\d]+$",
+          "description": "Theme model version",
+          "examples": ["1", "1.0"]
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["dark", "light"]
+        }
+      },
+      "required": ["name"],
+      "description": "Theme metadata"
+    },
+    "palette": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^#\\w{3,8}$",
+        "description": "Color hex",
+        "examples": ["#fff", "#123abc"]
+      },
+      "description": "Map of the color name in its hex"
+    },
+    "text": {
+      "$ref": "#/$defs/css",
+      "description": "Default text CSS properties"
+    },
+    "classes": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/css"},
+      "description": "List of CSS classes for this theme"
+    },
+    "tokens": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "description": "Class name for token type"
+      },
+      "description": "Token type classes for all supported languages"
+    }
+  },
+  "required": ["id", "meta", "classes", "tokens"],
+  "$defs": {
+    "css": {
+      "type": "object",
+      "properties": {
+        "color": {"type": "string"},
+        "backgroundColor": {"type": "string"},
+        "caretColor": {"type": "string"},
+        "display": {"type": "string"},
+        "margin": {"anyOf": [{"type": "string"}, {"type": "number"}]},
+        "padding": {"anyOf": [{"type": "string"}, {"type": "number"}]},
+        "fontSize": {"anyOf": [{"type": "string"}, {"type": "number"}]},
+        "fontWeight": {"type": "string"},
+        "fontFamily": {"type": "string"},
+        "fontStyle": {"type": "string"},
+        "fontVariantLigatures": {"type": "string"},
+        "textDecoration": {"type": "string"},
+        "lineHeight": {"anyOf": [{"type": "string"}, {"type": "number"}]},
+        "borderRadius": {"anyOf": [{"type": "string"}, {"type": "number"}]}
+      }
+    }
+  }
+}
