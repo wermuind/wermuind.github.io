@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">Git | Notes</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://wermuind.github.io/notes/common/git"><meta data-rh="true" property="og:locale" content="ru"><meta data-rh="true" name="docusaurus_locale" content="ru"><meta data-rh="true" name="docsearch:language" content="ru"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Git | Notes"><meta data-rh="true" name="description" content="Система контроля версий (version control system, VCS) — это ПО,"><meta data-rh="true" property="og:description" content="Система контроля версий (version control system, VCS) — это ПО,"><link data-rh="true" rel="icon" href="/notes/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://wermuind.github.io/notes/common/git"><link data-rh="true" rel="alternate" href="https://wermuind.github.io/notes/common/git" hreflang="ru"><link data-rh="true" rel="alternate" href="https://wermuind.github.io/notes/common/git" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/notes/assets/css/styles.64ac11ae.css">
-<script src="/notes/assets/js/runtime~main.fc7aa5c3.js" defer="defer"></script>
+<script src="/notes/assets/js/runtime~main.59283e98.js" defer="defer"></script>
 <script src="/notes/assets/js/main.832987f3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -18,18 +18,43 @@
 в 2005 году.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="main-commands">Основные команды<a href="#main-commands" class="hash-link" aria-label="Прямая ссылка на Основные команды" title="Прямая ссылка на Основные команды">​</a></h2>
 <p><code>git init</code> — инициализация нового репозитория<br>
-<code>git status</code> — получение состояния текущего репозитория<br>
-<code>git add</code> — добавление файлов в репозиторий<br>
+<code>git clone</code> — создание локальной копии удалённого репозитория<br>
+<code>git config</code> — управление конфигом (текущий репозиторий или глобально)<br>
+<code>git log</code> — просмотр истории коммитов<br>
+<code>git status</code> — получение текущего состояния репозитория<br>
+<code>git add</code> — добавление изменений в индекс<br>
 <code>git commit</code> — фиксация изменений<br>
-<code>git branch</code> — управление ветками<br>
-<code>git checkout</code> — переход между метками<br>
-<code>git merge</code> — объединение веток<br>
-<code>git config</code> — конфигурация (текущий репозиторий или г лобально)<br>
+<code>git tag</code> — управление тегами (указатели на определённые коммиты)<br>
 <code>git push</code> — отправка изменений на удалённый репозиторий<br>
 <code>git pull</code> — получение актуального состояния удалённого репозитория<br>
-<code>git clone</code> — клонирование удалённого репозитория на локальное окружение</p>
+<code>git diff</code> — сравнение изменений в файлах<br>
+<code>git branch</code> — управление ветками<br>
+<code>git checkout</code> — переход между ветками<br>
+<code>git merge</code> — объединение веток<br>
+<code>git reset</code> — сброс указателя текущей ветки (HEAD) в указанное состояние<br></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="dot-files">Dot files<a href="#dot-files" class="hash-link" aria-label="Прямая ссылка на Dot files" title="Прямая ссылка на Dot files">​</a></h2>
-<p><code>.gitignore</code> — список не отслеживаемых файлов и каталогов<br>
-<code>.gitattributes</code> — атрибуты для файлов и каталогов</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Страница документа"><a class="pagination-nav__link pagination-nav__link--prev" href="/notes/common/cli"><div class="pagination-nav__sublabel">Предыдущая страница</div><div class="pagination-nav__label">Командная строка</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/notes/common/solid"><div class="pagination-nav__sublabel">Следующая страница</div><div class="pagination-nav__label">Принципы SOLID</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#main-commands" class="table-of-contents__link toc-highlight">Основные команды</a></li><li><a href="#dot-files" class="table-of-contents__link toc-highlight">Dot files</a></li></ul></div></div></div></div></main></div></div></div></div>
+<p><code>.gitignore</code> — список неотслеживаемых файлов и каталогов<br>
+<code>.gitattributes</code> — атрибуты для файлов и каталогов<br></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Прямая ссылка на Best Practices" title="Прямая ссылка на Best Practices">​</a></h2>
+<ul>
+<li>
+<p><strong>Мелкие коммиты лучше больших</strong>: когда коммит содержит логически связанные
+изменения для <em>одной</em> конкретной задачи, это делает историю изменений более
+понятной и упрощает отладку.</p>
+</li>
+<li>
+<p><strong>Синхронизация — основа командной работы</strong>: чем чаще забираются обновления
+с удалённого репозитория, тем меньше вероятность возникновения конфликтов
+в коде.</p>
+</li>
+<li>
+<p>Для каждой новой функциональности или исправления создаётся отдельная ветка:
+разработчики работают над разными задачами независимо.</p>
+</li>
+<li>
+<p>Основная ветка (<code>main</code>/<code>master</code>) всегда содержит рабочий код. Новые функции
+сначала тестируются в своей ветке. Перед слиянием проводится code review.</p>
+</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Страница документа"><a class="pagination-nav__link pagination-nav__link--prev" href="/notes/common/cli"><div class="pagination-nav__sublabel">Предыдущая страница</div><div class="pagination-nav__label">Командная строка</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/notes/common/solid"><div class="pagination-nav__sublabel">Следующая страница</div><div class="pagination-nav__label">Принципы SOLID</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#main-commands" class="table-of-contents__link toc-highlight">Основные команды</a></li><li><a href="#dot-files" class="table-of-contents__link toc-highlight">Dot files</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
