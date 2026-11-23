@@ -1,0 +1,156 @@
+<!doctype html><html lang=ru dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ts/ecmascript" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Стандарты ECMAScript | Notes</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://wermuind.github.io/notes/ts/ecmascript /><meta data-rh=true property=og:locale content=ru /><meta data-rh=true name=docusaurus_locale content=ru /><meta data-rh=true name=docsearch:language content=ru /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Стандарты ECMAScript | Notes"/><meta data-rh=true name=description content=ES2026 /><meta data-rh=true property=og:description content=ES2026 /><link data-rh=true rel=icon href=/notes/img/favicon.ico /><link data-rh=true rel=canonical href=https://wermuind.github.io/notes/ts/ecmascript /><link data-rh=true rel=alternate href=https://wermuind.github.io/notes/ts/ecmascript hreflang=ru /><link data-rh=true rel=alternate href=https://wermuind.github.io/notes/ts/ecmascript hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wermuind.github.io/notes/ts/","name":"TypeScript","position":1},{"@type":"ListItem","item":"https://wermuind.github.io/notes/ts/ecmascript","name":"Стандарты ECMAScript","position":2}]}</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css type=text/css integrity=sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM crossorigin=anonymous><link rel=stylesheet href=/notes/assets/css/styles.9dba8c78.css /><script src=/notes/assets/js/runtime~main.9b7ccafe.js defer></script><script src=/notes/assets/js/main.05e3abb0.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/notes/img/logo.svg /><div role=region aria-label="Перейти к основному содержимому"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Перейти к основному содержимому</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Переключить навигационную панель" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/notes/><div class=navbar__logo><img src=/notes/img/logo.svg alt=logo class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/notes/img/logo.svg alt=logo class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Главная</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/notes/ts/>TypeScript</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://github.com/wermuind target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Прокрутка к началу" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/notes/common/><span class=categoryLinkLabel_W154>Общее</span></a><button aria-label="Expand sidebar category 'Общее'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/notes/cpp/><span class=categoryLinkLabel_W154>C++</span></a><button aria-label="Expand sidebar category 'C++'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href=/notes/ts/><span class=categoryLinkLabel_W154>TypeScript</span></a><button aria-label="Collapse sidebar category 'TypeScript'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/notes/ts/ecmascript><span class=linkLabel_WmDU>Стандарты ECMAScript</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/ts/tsconfig><span class=linkLabel_WmDU>TSConfig</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/ts/object><span class=linkLabel_WmDU>Object</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/ts/iterator><span class=linkLabel_WmDU>Итераторы</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/ts/regex><span class=linkLabel_WmDU>Регулярные выражения</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/ts/jsdoc><span class=linkLabel_WmDU>JSDoc</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/notes/db/><span class=categoryLinkLabel_W154>Базы данных</span></a><button aria-label="Expand sidebar category 'Базы данных'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/notes/compiler/><span class=categoryLinkLabel_W154>Теория компиляции</span></a><button aria-label="Expand sidebar category 'Теория компиляции'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/notes/low-level/><span class=categoryLinkLabel_W154>Low Level</span></a><button aria-label="Expand sidebar category 'Low Level'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/notes/math/><span class=categoryLinkLabel_W154>Математика</span></a><button aria-label="Expand sidebar category 'Математика'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Навигационная цепочка текущей страницы"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Главная страница" class=breadcrumbs__link href=/notes/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/notes/ts/><span>TypeScript</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Стандарты ECMAScript</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">Содержание этой страницы</button></div><div class="theme-doc-markdown markdown"><header><h1>Стандарты ECMAScript</h1></header>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2026>ES2026<a href=#es2026 class=hash-link aria-label="Прямая ссылка на ES2026" title="Прямая ссылка на ES2026" translate=no>​</a></h3>
+<ul>
+<li class="">методы <code>Uint8Array</code> для работы с форматами Base64 и Hex</li>
+<li class="">методы <code>.getOrInsert()</code> и <code>.getOrInsertComputed()</code> для <code>Map</code> и <code>WeakMap</code></li>
+<li class=""><code>Math.sumPrecise()</code> – точное суммирование чисел с минимизацией погрешности</li>
+<li class=""><code>Iterator.concat()</code> – объединение нескольких итерируемых объектов</li>
+<li class=""><code>Array.fromAsync()</code> – асинхронное создание массивов</li>
+<li class=""><code>Error.isError()</code> – надёжная проверка объектов ошибок</li>
+</ul>
+<p>Работа с JSON:</p>
+<ul>
+<li class="">доступ к исходному тексту значения в <code>JSON.parse()</code></li>
+<li class=""><code>JSON.rawJSON()</code> – вставка необработанного JSON-представления</li>
+<li class=""><code>JSON.isRawJSON()</code> – проверка raw JSON-объектов</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2025>ES2025<a href=#es2025 class=hash-link aria-label="Прямая ссылка на ES2025" title="Прямая ссылка на ES2025" translate=no>​</a></h3>
+<ul>
+<li class="">глобальный объект <code>Iterator</code> и Iterator Helpers</li>
+<li class="">методы <code>Set</code> для операций над множествами</li>
+<li class=""><code>Promise.try()</code> – преобразование результата или синхронного исключения</li>
+<li class="">тип <code>Float16Array</code> и связанные с ним методы у <code>DataView</code> и <code>Math</code></li>
+</ul>
+<p>Новые возможности регулярных выражений:</p>
+<ul>
+<li class=""><code>RegExp.escape()</code> – экранирование строки для использования внутри выражения</li>
+<li class="">inline-модификаторы флагов: <code>/^--module=(?i:esnext)$/</code></li>
+<li class="">повторяющиеся имена групп захвата в альтернативных ветках</li>
+</ul>
+<p>ECMAScript Modules:</p>
+<ul>
+<li class="">синтаксис Import Attributes: <code>import ... with { ... }</code></li>
+<li class="">поддержка импорта JSON-модулей</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2024>ES2024<a href=#es2024 class=hash-link aria-label="Прямая ссылка на ES2024" title="Прямая ссылка на ES2024" translate=no>​</a></h3>
+<ul>
+<li class=""><code>Promise.withResolvers()</code> – создание <code>Promise</code> вместе с <code>resolve</code> и <code>reject</code></li>
+<li class=""><code>Object.groupBy()</code> и <code>Map.groupBy()</code></li>
+<li class="">методы строки <code>.isWellFormed()</code> и <code>.toWellFormed()</code></li>
+<li class="">флаг <code>/v</code> в регулярных выражениях: расширенная работа с Unicode-множествами</li>
+<li class="">возможность изменения размера и передачи владения <code>ArrayBuffer</code></li>
+<li class="">возможность увеличения размера <code>SharedArrayBuffer</code></li>
+<li class=""><code>Atomics.waitAsync()</code> – ожидание изменения значения в разделяемой памяти</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2023>ES2023<a href=#es2023 class=hash-link aria-label="Прямая ссылка на ES2023" title="Прямая ссылка на ES2023" translate=no>​</a></h3>
+<p>Методы Array и TypedArray для поиска с конца:<br/>
+<code>.findLast()</code>, <code>.findLastIndex()</code></p>
+<p>Изменение Array и TypedArray через возвращение новой копии:<br/>
+<code>.with()</code>, <code>.toSorted()</code>, <code>.toReversed()</code>, <code>.toSliced()</code></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2022>ES2022<a href=#es2022 class=hash-link aria-label="Прямая ссылка на ES2022" title="Прямая ссылка на ES2022" translate=no>​</a></h3>
+<ul>
+<li class="">метод <code>.at()</code> для Array, String и TypedArray</li>
+<li class=""><code>Object.hasOwn()</code> – проверка наличия собственного свойства объекта</li>
+<li class=""><code>Error.cause</code> – возможность указывать исходную причину ошибки</li>
+<li class="">флаг <code>/d</code> в регулярных выражениях: начальные и конечные индексы совпадений</li>
+<li class="">top-level <code>await</code> в модулях</li>
+</ul>
+<p>Новые возможности классов:</p>
+<ul>
+<li class="">приватные поля, статические поля, методы, геттеры и сеттеры</li>
+<li class="">статические блоки инициализации: <code>static { ... }</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2021>ES2021<a href=#es2021 class=hash-link aria-label="Прямая ссылка на ES2021" title="Прямая ссылка на ES2021" translate=no>​</a></h3>
+<ul>
+<li class="">логические операторы присваивания: <code>&&=</code> , <code>||=</code> и <code>??=</code></li>
+<li class="">numeric separators: возможность разделять разряды чисел (<code>1_000_000</code>)</li>
+<li class="">метод строки <code>.replaceAll()</code></li>
+<li class=""><code>Promise.any()</code> – выполнение при первом успешно выполненном промисе</li>
+<li class="">новый тип ошибки <code>AggregateError</code></li>
+<li class=""><code>WeakRef</code> и <code>FinalizationRegistry</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2020>ES2020<a href=#es2020 class=hash-link aria-label="Прямая ссылка на ES2020" title="Прямая ссылка на ES2020" translate=no>​</a></h3>
+<ul>
+<li class="">оператор optional chaining: <code>?.</code></li>
+<li class="">оператор nullish coalescing: <code>??</code></li>
+<li class="">тип данных <code>BigInt</code> для целых чисел произвольной точности</li>
+<li class="">метод строки <code>.matchAll()</code></li>
+<li class=""><code>Promise.allSettled()</code> – ожидание завершения независимо от результата</li>
+<li class="">стандартизация порядка перечисления свойств в <code>for...in</code></li>
+<li class="">универсальный способ доступа к глобальному объекту через <code>globalThis</code></li>
+</ul>
+<p>ECMAScript Modules:</p>
+<ul>
+<li class=""><code>import()</code> – динамическая загрузка ES-модулей</li>
+<li class=""><code>import.meta</code> – метаобъект с информацией о текущем ES-модуле</li>
+<li class=""><code>export * as ns</code> – реэкспорт всех экспортов под единым пространством имён</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2019>ES2019<a href=#es2019 class=hash-link aria-label="Прямая ссылка на ES2019" title="Прямая ссылка на ES2019" translate=no>​</a></h3>
+<ul>
+<li class="">методы массива <code>.flat()</code> и <code>.flatMap()</code></li>
+<li class="">методы строки <code>.trimStart()</code> и <code>.trimEnd()</code></li>
+<li class=""><code>Object.fromEntries()</code> – создание объекта из последовательности пар</li>
+<li class="">возможность опускать параметр в <code>catch</code></li>
+<li class="">специальное свойство <code>description</code> для <code>Symbol</code></li>
+<li class="">well-formed <code>JSON.stringify()</code>: обработка одиночных суррогатов Unicode</li>
+<li class="">стандартизация <code>.toString()</code> для <code>Function</code>: сохранение исходного текста</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2018>ES2018<a href=#es2018 class=hash-link aria-label="Прямая ссылка на ES2018" title="Прямая ссылка на ES2018" translate=no>​</a></h3>
+<ul>
+<li class="">rest-синтаксис при деструктуризации объектов</li>
+<li class="">spread-синтаксис в литералах объектов</li>
+<li class="">асинхронные итераторы и конструкция <code>for await..of</code></li>
+<li class="">метод <code>.finally()</code> для Promise</li>
+</ul>
+<p>Новые возможности регулярных выражений:</p>
+<ul>
+<li class="">именованные группы: <code>(?&lt;name>...)</code></li>
+<li class="">lookbehind – проверка назад: <code>(?&lt;=...)</code> и <code>(?&lt;!...)</code></li>
+<li class="">поиск по Unicode-категориям: <code>\p{...}</code> и <code>\P{...}</code></li>
+<li class="">флаг <code>/s</code>: для <code>.</code> включает символы перевода строки</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2017>ES2017<a href=#es2017 class=hash-link aria-label="Прямая ссылка на ES2017" title="Прямая ссылка на ES2017" translate=no>​</a></h3>
+<ul>
+<li class=""><code>async</code> / <code>await</code> – синтаксис асинхронных функций поверх <code>Promise</code></li>
+<li class=""><code>Object.values()</code> и <code>Object.entries()</code></li>
+<li class=""><code>Object.getOwnPropertyDescriptors()</code> – дескрипторы всех собственных свойств</li>
+<li class="">методы строк <code>.padStart()</code> и <code>.padEnd()</code></li>
+<li class="">trailing comma в объявлениях и при вызове функций</li>
+<li class=""><code>SharedArrayBuffer</code> и <code>Atomics</code> для безопасной работы с разделяемой памятью</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2016>ES2016<a href=#es2016 class=hash-link aria-label="Прямая ссылка на ES2016" title="Прямая ссылка на ES2016" translate=no>​</a></h3>
+<ul>
+<li class="">метод массива <code>.includes()</code></li>
+<li class="">оператор возведения в степень: <code>**</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=es2015>ES2015<a href=#es2015 class=hash-link aria-label="Прямая ссылка на ES2015" title="Прямая ссылка на ES2015" translate=no>​</a></h3>
+<p>Синтаксис и конструкции языка:</p>
+<ul>
+<li class=""><code>let</code> и <code>const</code>, цикл <code>for..of</code></li>
+<li class="">стрелочные функции, параметры по умолчанию, rest-параметры</li>
+<li class="">оператор spread, деструктуризация массивов</li>
+<li class="">литералы строк-шаблонов, Unicode-экранироваине</li>
+<li class="">расширение литералов объектов, новые литералы чисел</li>
+<li class="">классы, наследование и <code>static</code></li>
+<li class="">функции-генераторы и <code>yield</code></li>
+<li class="">модули: <code>import</code> / <code>export</code></li>
+</ul>
+<p>Новые механизмы языка:</p>
+<ul>
+<li class="">протокол итерации</li>
+<li class=""><code>Promise</code> – стандартный механизм асинхронных операций</li>
+<li class=""><code>Symbol</code>, символьные ключи и well-known symbols</li>
+<li class=""><code>Proxy</code> и <code>Reflect</code></li>
+<li class="">поддержка наследования встроенных типов</li>
+</ul>
+<p>Новые встроенные объекты:</p>
+<ul>
+<li class="">коллекции <code>Map</code>, <code>Set</code>, <code>WeakMap</code>, <code>WeakSet</code></li>
+<li class="">типизированные массивы (например, <code>Uint8Array</code>)</li>
+<li class=""><code>ArrayBuffer</code>, <code>DataView</code> – работа с бинарными данными</li>
+</ul>
+<p>Расширение существующих API:<br/>
+<code>Array</code>, <code>Object</code>, <code>String</code>, <code>Number</code>, <code>Math</code>, <code>RegExp</code>, <code>Function</code>, <code>Date</code>.</div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Страница документа"><a class="pagination-nav__link pagination-nav__link--prev" href=/notes/ts/><div class=pagination-nav__sublabel>Предыдущая страница</div><div class=pagination-nav__label>TypeScript</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/notes/ts/tsconfig><div class=pagination-nav__sublabel>Следующая страница</div><div class=pagination-nav__label>TSConfig</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#es2026 class="table-of-contents__link toc-highlight">ES2026</a><li><a href=#es2025 class="table-of-contents__link toc-highlight">ES2025</a><li><a href=#es2024 class="table-of-contents__link toc-highlight">ES2024</a><li><a href=#es2023 class="table-of-contents__link toc-highlight">ES2023</a><li><a href=#es2022 class="table-of-contents__link toc-highlight">ES2022</a><li><a href=#es2021 class="table-of-contents__link toc-highlight">ES2021</a><li><a href=#es2020 class="table-of-contents__link toc-highlight">ES2020</a><li><a href=#es2019 class="table-of-contents__link toc-highlight">ES2019</a><li><a href=#es2018 class="table-of-contents__link toc-highlight">ES2018</a><li><a href=#es2017 class="table-of-contents__link toc-highlight">ES2017</a><li><a href=#es2016 class="table-of-contents__link toc-highlight">ES2016</a><li><a href=#es2015 class="table-of-contents__link toc-highlight">ES2015</a></ul></div></div></div></div></main></div></div></div></div></body>
